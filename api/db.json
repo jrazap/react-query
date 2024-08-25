@@ -1,0 +1,34 @@
+{
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Superman",
+      "description": "The world's greatest hero",
+      "powers": ["Superhuman strength", "Flight", "Superhuman agility"]
+    },
+    {
+      "id": 2,
+      "name": "Batman",
+      "description": "The dark knight",
+      "powers": ["Intelligence", "Speed", "Durability"]
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman",
+      "description": "The forceful female superhero",
+      "powers": ["Superhuman strength", "Agility", "Speed"]
+    },
+    {
+      "id": 4,
+      "name": "Hulk",
+      "description": "The mighty Hulk",
+      "powers": ["Superhuman strength", "Durability", "Toughness"]
+    },
+    {
+      "id": 5,
+      "name": "Iron Man",
+      "description": "The mighty Avenger",
+      "powers": ["Superhuman strength", "Intelligence", "Speed"]
+    }
+  ]
+}
