@@ -29,6 +29,12 @@
       "name": "Iron Man",
       "description": "The mighty Avenger",
       "powers": ["Superhuman strength", "Intelligence", "Speed"]
+    },
+    {
+      "id": 6,
+      "name": "Spider-Man",
+      "description": "The web-slinger",
+      "powers": ["Spider-sense", "Web-slinging", "Superhuman agility"]
     }
   ]
 }
