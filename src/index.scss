@@ -9,15 +9,22 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 nav {
   li {
     font-weight: 400;
-    
   }
 }
+
 a {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

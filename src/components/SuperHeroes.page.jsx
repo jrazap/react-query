@@ -1,32 +1,32 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Loading from "../layout/Loading";
+import Error from "../layout/Error";
 
 const SuperHeroesPage = () => {
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [error, setError] = useState("");
 
   const getData = async () => {
-    try {
-      setLoading(true);
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_APP_API_URL}/superheroes`
-      );
-
-      setData(data);
-    } catch (error) {
-      console.error("Error fetching superheroes:", error);
-    } finally {
-      setLoading(false);
-    }
+    await axios
+      .get(`${import.meta.env.VITE_APP_API_URL}/superheroes`)
+      .then(({ data }) => {
+        setData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setError(error.message);
+        setIsLoading(false);
+      });
   };
 
   useEffect(() => {
     getData();
   }, []);
 
-  if (loading) return <Loading />;
-
+  if (isLoading) return <Loading />;
+  if (error) return <Error error={error} />;
   return (
     <section className="my-4">
       <div className="container">
@@ -41,6 +41,16 @@ const SuperHeroesPage = () => {
                       <div className="card-body">
                         <h5 className="card-title">{hero.name}</h5>
                         <p className="card-text">{hero.description}</p>
+                        <div className="super-powers d-flex gap-2">
+                          {hero.powers.map((power, idx) => (
+                            <span
+                              key={`power-${idx}`}
+                              className="badge bg-dark"
+                            >
+                              {power}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
