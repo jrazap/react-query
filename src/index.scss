@@ -23,8 +23,17 @@ a {
   }
 }
 
-.flex-center {
+.items-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.flex-center {
+  @extend .items-center;
+  justify-content: center;
+}
+
+.flex-between {
+  @extend .items-center;
+  justify-content: space-between;
 }

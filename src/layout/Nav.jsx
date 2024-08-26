@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Nav = () => (
   <nav className="nav my-2">
-    <div className="container d-flex align-items-center justify-content-between">
+    <div className="container flex-between">
       <h2 className="fs-4">React Query</h2>
-      <ul className="d-flex align-items-center gap-3">
+      <ul className="items-center gap-3">
         <li>
           <Link className="text-dark" to="/">
             Home

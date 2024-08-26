@@ -1,21 +1,22 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { RouterProvider } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import router from "./router.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
-import { RouterProvider } from "react-router-dom";
-import router from "./router.jsx";
+import Loading from "./layout/Loading.jsx";
 
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <Suspense fallback={"Loading..."}>
+      <Suspense fallback={<Loading />}>
         <RouterProvider router={router} />
       </Suspense>
-      <ReactQueryDevtools />
+      <ReactQueryDevtools position="bottom-right"/>
     </QueryClientProvider>
   </React.StrictMode>
 );

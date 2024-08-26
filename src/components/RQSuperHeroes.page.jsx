@@ -4,7 +4,7 @@ import Loading from "../layout/Loading";
 import Error from "../layout/Error";
 
 const fetchSuperHeroes = () => {
-  return axios.get(`${import.meta.env.VITE_APP_API_URL}/superheroe`);
+  return axios.get(`${import.meta.env.VITE_APP_API_URL}/superheroes`);
 };
 
 const RQSuperHeroesPage = () => {
@@ -29,7 +29,7 @@ const RQSuperHeroesPage = () => {
                       <div className="card-body">
                         <h5 className="card-title">{hero.name}</h5>
                         <p className="card-text">{hero.description}</p>
-                        <div className="super-powers d-flex gap-2">
+                        <div className="super-powers items-center gap-2">
                           {hero.powers.map((power, idx) => (
                             <span
                               key={`power-${idx}`}
