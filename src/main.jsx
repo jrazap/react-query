@@ -4,9 +4,9 @@ import { RouterProvider } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import router from "./router.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.scss";
 import Loading from "./layout/Loading.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/index.scss";
 
 const queryClient = new QueryClient();
 
