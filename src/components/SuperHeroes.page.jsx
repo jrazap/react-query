@@ -45,7 +45,7 @@ const SuperHeroesPage = () => {
                           {hero.powers.map((power, idx) => (
                             <span
                               key={`power-${idx}`}
-                              className="badge bg-dark"
+                              className="badge bg-dark p-2"
                             >
                               {power}
                             </span>
