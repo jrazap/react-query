@@ -1,26 +1,18 @@
-import axios from "axios";
-import { useQuery } from "react-query";
 import Loading from "../layout/Loading";
 import Error from "../layout/Error";
-
-const fetchSuperHeroes = () => {
-  return axios.get(`${import.meta.env.VITE_APP_API_URL}/superheroes`);
-};
+import { useSuperHeroesData } from "../hooks/useSuperHeroesData";
 
 const RQSuperHeroesPage = () => {
-  const { isLoading, data, isError, error, isFetching, refetch } = useQuery(
-    "super-heroes",
-    fetchSuperHeroes,
-    {
-      // cacheTime: 5000,
-      // staleTime: 30000,
-      // refetchOnMount: true,
-      // refetchOnWindowFocus: true,
-      // refetchInterval: 5000,
-      // refetchIntervalInBackground: true,
-      enabled: true,
-    }
-  );
+  const onSuccess = (data) => {
+    console.log("Perform side effect after data fetching", data);
+  };
+
+  const onError = (error) => {
+    console.error("Perform side effect after encountering error", error);
+  };
+
+  const { isLoading, data, isError, error, isFetching, refetch } =
+    useSuperHeroesData(onSuccess, onError);
 
   const RefreshhBtn = () => (
     <div className="flex-center my-4">
@@ -43,7 +35,8 @@ const RQSuperHeroesPage = () => {
       <div className="container">
         <h1 className="display-4 mb-4">RQ Super Heroes Page</h1>
 
-        {data && (
+        {/* Without Select */}
+        {/* {data && (
           <div className="row">
             {data.data.map((hero, idx) => {
               return (
@@ -64,6 +57,27 @@ const RQSuperHeroesPage = () => {
                               </span>
                             ))}
                           </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )} */}
+
+        {/* With Select */}
+        {data && (
+          <div className="row">
+            {data.map((heroName, idx) => {
+              return (
+                <div className="col-lg-4" key={`hero-${idx}`}>
+                  <div className="card mb-3">
+                    <div className="row g-0">
+                      <div className="col-md-8">
+                        <div className="card-body">
+                          <h5 className="card-title">{heroName}</h5>
                         </div>
                       </div>
                     </div>
