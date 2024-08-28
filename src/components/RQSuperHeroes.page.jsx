@@ -32,7 +32,7 @@ const RQSuperHeroesPage = () => {
           {data?.data.map((hero, idx) => {
             return (
               <div className="col-lg-4" key={`hero-${idx}`}>
-                <Link to={hero.id} className="card mb-3">
+                <Link to={`/rq-super-heroes/${hero.id}`} className="card mb-3">
                   <div className="row g-0">
                     <div className="col-md-8">
                       <div className="card-body">

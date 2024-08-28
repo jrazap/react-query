@@ -20,6 +20,11 @@ const Nav = () => (
             RQ Super Heroes
           </Link>
         </li>
+        <li>
+          <Link className="text-dark" to="/rq-parallel">
+            RQ Parallel
+          </Link>
+        </li>
       </ul>
     </div>
   </nav>
