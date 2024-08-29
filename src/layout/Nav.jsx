@@ -25,6 +25,11 @@ const Nav = () => (
             RQ Parallel
           </Link>
         </li>
+        <li>
+          <Link className="text-dark" to="/rq-dynamic-parallel">
+            RQ Dynamic Parallel
+          </Link>
+        </li>
       </ul>
     </div>
   </nav>

@@ -5,6 +5,7 @@ import SuperHeroesPage from "./components/SuperHeroes.page";
 import RQSuperHeroesPage from "./components/RQSuperHeroes.page";
 import RQSuperHeroPage from "./components/RQSuperHero.page";
 import ParallelQueriesPage from "./components/ParallelQueries.page";
+import DynamicParallelPage from "./components/DynamicParallel.page";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "rq-parallel",
         element: <ParallelQueriesPage />,
+      },
+      {
+        path: "rq-dynamic-parallel",
+        element: <DynamicParallelPage heroIds={[1, 3]} />,
       },
       {
         path: "*",
