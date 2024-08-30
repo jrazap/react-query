@@ -51,5 +51,20 @@
       "id": 3,
       "name": "Black Widow"
     }
+  ],
+
+  "users": [
+    {
+      "id": "jrazap@gmail.com",
+      "name": "Mohamed Elazap",
+      "channelId": "jrazap"
+    }
+  ],
+
+  "channels": [
+    {
+      "id": "jrazap",
+      "courses": ["React", "Vue", "Angular"]
+    }
   ]
 }

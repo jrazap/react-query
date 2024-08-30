@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import LayoutComponent from "./layout/Layout";
-import HomePage from "./components/Home.page";
-import SuperHeroesPage from "./components/SuperHeroes.page";
-import RQSuperHeroesPage from "./components/RQSuperHeroes.page";
-import RQSuperHeroPage from "./components/RQSuperHero.page";
-import ParallelQueriesPage from "./components/ParallelQueries.page";
-import DynamicParallelPage from "./components/DynamicParallel.page";
+import HomePage from "./pages/Home.page";
+import SuperHeroesPage from "./pages/SuperHeroes.page";
+import RQSuperHeroesPage from "./pages/RQSuperHeroes.page";
+import RQSuperHeroPage from "./pages/RQSuperHero.page";
+import ParallelQueriesPage from "./pages/ParallelQueries.page";
+import DynamicParallelPage from "./pages/DynamicParallel.page";
+import DependentQueriesPage from "./pages/DependentQueries.page";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "rq-dynamic-parallel",
         element: <DynamicParallelPage heroIds={[1, 3]} />,
+      },
+      {
+        path: "rq-dependent",
+        element: <DependentQueriesPage email="jrazap@gmail.com" />,
       },
       {
         path: "*",

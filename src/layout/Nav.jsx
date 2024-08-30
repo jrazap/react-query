@@ -1,38 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const Nav = () => (
-  <nav className="nav my-2">
-    <div className="container flex-between">
-      <h2 className="fs-4">React Query</h2>
-      <ul className="items-center gap-3">
-        <li>
-          <Link className="text-dark" to="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link className="text-dark" to="/super-heroes">
-            Super Heroes
-          </Link>
-        </li>
-        <li>
-          <Link className="text-dark" to="/rq-super-heroes">
-            RQ Super Heroes
-          </Link>
-        </li>
-        <li>
-          <Link className="text-dark" to="/rq-parallel">
-            RQ Parallel
-          </Link>
-        </li>
-        <li>
-          <Link className="text-dark" to="/rq-dynamic-parallel">
-            RQ Dynamic Parallel
-          </Link>
-        </li>
-      </ul>
-    </div>
-  </nav>
-);
+const navRoutes = [
+  { path: "/", label: "Home" },
+  { path: "/super-heroes", label: "Super Heroes" },
+  { path: "/rq-super-heroes", label: "RQ Super Heroes" },
+  { path: "/rq-parallel", label: "RQ Parallel" },
+  { path: "/rq-dynamic-parallel", label: "RQ Dynamic Parallel" },
+  { path: "/rq-dependent", label: "RQ Dependent" },
+];
+
+const Nav = () => {
+  const location = useLocation();
+
+  return (
+    <nav className="nav my-2">
+      <div className="container flex-between">
+        <h2 className="fs-4">React Query</h2>
+        <ul className="items-center gap-3">
+          {navRoutes.map((route) => (
+            <li
+              key={route.path}
+              className={`${location.pathname === route.path ? "active" : ""}`}
+            >
+              <Link className="text-dark link-style" to={route.path}>
+                {route.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
 export default Nav;

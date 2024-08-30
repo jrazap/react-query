@@ -1,9 +1,10 @@
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useSuperHeroData } from "../hooks/useSuperHeroData";
 import Error from "../layout/Error";
 import Loading from "../layout/Loading";
 
 const RQSuperHeroPage = () => {
+  const navigate = useNavigate();
   const { heroId } = useParams();
   const { isLoading, data, isError, error } = useSuperHeroData(heroId);
 
@@ -27,9 +28,12 @@ const RQSuperHeroPage = () => {
                     </span>
                   ))}
                 </div>
-                <Link to="/rq-super-heroes" className="btn btn-outline-dark mt-3">
+                <button
+                  onClick={() => navigate(-1)}
+                  className="btn btn-outline-dark mt-3"
+                >
                   Back
-                </Link>
+                </button>
               </div>
             </div>
           </div>
