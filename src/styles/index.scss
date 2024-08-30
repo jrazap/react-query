@@ -16,6 +16,15 @@ nav {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   padding: 1rem 2rem;
   transition: box-shadow 0.3s ease-in-out;
+
+  li {
+    &.active {
+      a {
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+      }
+    }
+  }
 }
 
 a {
@@ -41,7 +50,7 @@ a {
   position: relative;
   color: #000;
   text-decoration: none;
-  padding: 0 0.2rem;
+  padding: 0 0.25rem;
   transition: color 0.3s ease-in-out;
 
   &::before {
