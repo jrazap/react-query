@@ -66,5 +66,48 @@
       "id": "jrazap",
       "courses": ["React", "Vue", "Angular"]
     }
+  ],
+
+  "colors": [
+    {
+      "id": 1,
+      "name": "Red"
+    },
+    {
+      "id": 2,
+      "name": "Blue"
+    },
+    {
+      "id": 3,
+      "name": "Green"
+    },
+    {
+      "id": 4,
+      "name": "Yellow"
+    },
+    {
+      "id": 5,
+      "name": "Purple"
+    },
+    {
+      "id": 6,
+      "name": "Orange"
+    },
+    {
+      "id": 7,
+      "name": "Pink"
+    },
+    {
+      "id": 8,
+      "name": "Brown"
+    },
+    {
+      "id": 9,
+      "name": "Gray"
+    },
+    {
+      "id": 10,
+      "name": "Black"
+    }
   ]
 }

@@ -1,3 +1,11 @@
+:root {
+  --main-color: #e91e63;
+  --white: #ffffff;
+  --black: #000000;
+  --nav-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -11,17 +19,16 @@ ul {
 }
 
 nav {
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: var(--white);
+  box-shadow: var(--nav-box-shadow);
   padding: 1rem 2rem;
   transition: box-shadow 0.3s ease-in-out;
 
   li {
     &.active {
       a {
-        text-decoration: underline;
-        text-underline-offset: 0.5rem;
+        color: var(--main-color) !important;
+        font-weight: 500;
       }
     }
   }
@@ -48,7 +55,7 @@ a {
 
 .link-style {
   position: relative;
-  color: #000;
+  color: var(--black);
   text-decoration: none;
   padding: 0 0.25rem;
   transition: color 0.3s ease-in-out;
@@ -60,18 +67,18 @@ a {
     height: 1px;
     bottom: -0.25rem;
     left: 0;
-    background-color: #000;
+    background-color: var(--black);
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out;
-  }
-
-  &:hover {
-    color: #000;
   }
 
   &:hover::before {
     visibility: visible;
     transform: scaleX(1);
   }
+}
+
+.main-color {
+  color: var(--main-color) !important;
 }
