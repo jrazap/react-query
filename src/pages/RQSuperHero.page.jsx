@@ -16,8 +16,8 @@ const RQSuperHeroPage = () => {
       <div className="container">
         <h1 className="display-4 mb-4">Super Hero Details</h1>
         <div className="card mb-3">
-          <div className="row g-0">
-            <div className="col-md-8">
+          <div className="row">
+            <div className="col-md-12">
               <div className="card-body">
                 <h5 className="card-title">{data?.data.name}</h5>
                 <p className="card-text">{data?.data.description}</p>
@@ -30,7 +30,7 @@ const RQSuperHeroPage = () => {
                 </div>
                 <button
                   onClick={() => navigate(-1)}
-                  className="btn btn-outline-dark mt-3"
+                  className="btn btn-sm btn-outline-dark mt-3"
                 >
                   Back
                 </button>

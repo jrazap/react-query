@@ -8,6 +8,7 @@ import ParallelQueriesPage from "./pages/ParallelQueries.page";
 import DynamicParallelPage from "./pages/DynamicParallel.page";
 import DependentQueriesPage from "./pages/DependentQueries.page";
 import PaginatedQueries from "./pages/PaginatedQueries";
+import InfiniteQueriesPage from "./pages/InfiniteQueries.page";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "rq-paginated",
         element: <PaginatedQueries pageLimit={2} />,
+      },
+      {
+        path: "rq-infinite",
+        element: <InfiniteQueriesPage />,
       },
       {
         path: "*",

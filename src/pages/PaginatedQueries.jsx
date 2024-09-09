@@ -34,8 +34,8 @@ const PaginatedQueries = ({ pageLimit }) => {
             return (
               <div className="col-lg-4" key={color.id}>
                 <div className="card mb-3">
-                  <div className="row g-0">
-                    <div className="col-md-8">
+                  <div className="row">
+                    <div className="col-md-12">
                       <div className="card-body">
                         <h5 className="card-title mb-0">
                           <span className="main-color">{`${color.id} | `}</span>
@@ -54,7 +54,7 @@ const PaginatedQueries = ({ pageLimit }) => {
             type="button"
             disabled={pageNumber === 1}
             onClick={() => setPageNumber((page) => page - 1)}
-            className="btn btn-outline-dark "
+            className="btn btn-sm btn-outline-dark "
           >
             {"<"}
           </button>
@@ -62,7 +62,7 @@ const PaginatedQueries = ({ pageLimit }) => {
             type="button"
             disabled={pageNumber === 5}
             onClick={() => setPageNumber((page) => page + 1)}
-            className="btn btn-outline-dark"
+            className="btn btn-sm btn-outline-dark"
           >
             {">"}
           </button>

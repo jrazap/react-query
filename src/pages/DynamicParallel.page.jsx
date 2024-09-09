@@ -30,8 +30,8 @@ const DynamicParallelPage = ({ heroIds }) => {
                 to={`/rq-super-heroes/${item.data?.data.id}`}
                 className="card mb-3"
               >
-                <div className="row g-0">
-                  <div className="col-md-8">
+                <div className="row">
+                  <div className="col-md-12">
                     <div className="card-body">
                       <h5 className="card-title">{item.data?.data.name}</h5>
                       <p className="card-text">{item.data?.data.description}</p>

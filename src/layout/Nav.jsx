@@ -8,6 +8,7 @@ const navRoutes = [
   { path: "/rq-dynamic-parallel", label: "RQ Dynamic Parallel" },
   { path: "/rq-dependent", label: "RQ Dependent" },
   { path: "/rq-paginated", label: "RQ Paginated" },
+  { path: "/rq-infinite", label: "RQ Infinite" },
 ];
 
 const Nav = () => {

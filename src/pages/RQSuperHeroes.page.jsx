@@ -33,8 +33,8 @@ const RQSuperHeroesPage = () => {
             return (
               <div className="col-lg-4" key={`hero-${idx}`}>
                 <Link to={`/rq-super-heroes/${hero.id}`} className="card mb-3">
-                  <div className="row g-0">
-                    <div className="col-md-8">
+                  <div className="row">
+                    <div className="col-md-12">
                       <div className="card-body">
                         <h5 className="card-title">{hero.name}</h5>
                         <p className="card-text">{hero.description}</p>

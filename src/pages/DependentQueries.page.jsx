@@ -52,8 +52,8 @@ const DependentQueriesPage = ({ email }) => {
           {channel?.data.courses.map((course) => (
             <div className="col-lg-4" key={`c-${course}`}>
               <div className="card mb-3">
-                <div className="row g-0">
-                  <div className="col-md-8">
+                <div className="row">
+                  <div className="col-md-12">
                     <div className="card-body">
                       <h4 className="card-title mb-0">{course}</h4>
                       <p>{channel?.data.id}</p>
