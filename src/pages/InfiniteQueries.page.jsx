@@ -32,7 +32,7 @@ const InfiniteQueriesPage = () => {
   if (isLoading) return <Loading />;
   if (isError) return <Error error={error.message} />;
   return (
-    <section className="my-4">
+    <section className="section">
       <div className="container">
         <h1 className="display-4 mb-4">Infinite Queries</h1>
         <div className="row">
@@ -60,13 +60,15 @@ const InfiniteQueriesPage = () => {
           })}
         </div>
 
-        <button
-          className="btn btn-sm btn-outline-dark"
-          onClick={fetchNextPage}
-          disabled={!hasNextPage}
-        >
-          Load More
-        </button>
+        <div className="flex-center my-4">
+          <button
+            className="btn btn-sm btn-outline-dark"
+            onClick={fetchNextPage}
+            disabled={!hasNextPage}
+          >
+            Load More
+          </button>
+        </div>
 
         {isFetching && !isFetchingNextPage ? "Fetching..." : null}
       </div>

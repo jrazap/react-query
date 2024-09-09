@@ -1,8 +1,8 @@
 const HomePage = () => {
   return (
-    <section className="my-4">
+    <section className="section">
       <div className="container">
-        <h1 className="display-4 mb-4">Home Page</h1>
+        <h1 className="display-4 mb-4">React Query</h1>
         <p className="mb-3 fs-6 fw-normal">
           <strong className="main-color">React Query</strong> is a powerful
           data-fetching library for React that simplifies managing server-state

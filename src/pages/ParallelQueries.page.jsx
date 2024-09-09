@@ -15,9 +15,9 @@ const ParallelQueriesPage = () => {
   const { data: friends } = useQuery(["friends"], fetchFriends);
 
   return (
-    <section className="my-4">
+    <section className="section">
       <div className="container">
-        <h1 className="display-4 mb-4">Parallel Queries Page</h1>
+        <h1 className="display-4 mb-4">Parallel Queries</h1>
 
         <div className="super-heroes mb-4">
           <h3 className="fs-2 fw-light mb-2">Super Heroes</h3>

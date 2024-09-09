@@ -12,7 +12,7 @@ const RQSuperHeroPage = () => {
   if (isError) return <Error error={error.message} />;
 
   return (
-    <section className="my-4">
+    <section className="section">
       <div className="container">
         <h1 className="display-4 mb-4">Super Hero Details</h1>
         <div className="card mb-3">

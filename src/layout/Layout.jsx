@@ -3,10 +3,14 @@ import Nav from "./Nav";
 
 const LayoutComponent = () => {
   return (
-    <>
-      <Nav />
-      <Outlet />
-    </>
+    <div className="layout-container">
+      <aside>
+        <Nav />
+      </aside>
+      <div className="content">
+        <Outlet />
+      </div>
+    </div>
   );
 };
 

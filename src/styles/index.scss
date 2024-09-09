@@ -2,8 +2,8 @@
   --main-color: #e91e63;
   --white: #ffffff;
   --black: #000000;
-  --nav-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --nav-box-shadow: 4px 0 6px -1px rgba(0, 0, 0, 0.1),
+    2px 0 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 body {
@@ -18,20 +18,36 @@ ul {
   padding: 0;
 }
 
-nav {
-  background-color: var(--white);
-  box-shadow: var(--nav-box-shadow);
-  padding: 1rem 2rem;
-  transition: box-shadow 0.3s ease-in-out;
+.layout-container {
+  display: flex;
+  min-block-size: 100vh;
 
-  li {
-    font-size: 1rem;
-    &.active {
-      a {
-        color: var(--main-color) !important;
-        font-weight: 500;
+  aside {
+    flex: 0 0 12rem;
+    padding: 1rem 0;
+    box-shadow: var(--nav-box-shadow);
+    transition: box-shadow 0.3s ease-in-out;
+
+    .nav {
+      background-color: var(--white);
+
+      li {
+        font-size: 1rem;
+
+        &.active {
+          a {
+            color: var(--main-color) !important;
+            font-weight: 500;
+          }
+        }
       }
     }
+  }
+
+  .content {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 3rem 1rem;
   }
 }
 

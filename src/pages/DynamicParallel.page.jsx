@@ -20,9 +20,9 @@ const DynamicParallelPage = ({ heroIds }) => {
   console.log(queryResults);
 
   return (
-    <section className="my-4">
+    <section className="section">
       <div className="container">
-        <h1 className="display-4 mb-4">Dynamic Parallel Page</h1>
+        <h1 className="display-4 mb-4">Dynamic Parallel</h1>
         <div className="row">
           {queryResults?.map((item, idx) => (
             <div className="col-lg-4" key={`hero-${idx}`}>

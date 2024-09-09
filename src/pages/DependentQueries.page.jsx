@@ -45,7 +45,7 @@ const DependentQueriesPage = ({ email }) => {
     );
 
   return (
-    <section className="my-4">
+    <section className="section">
       <div className="container">
         <h1 className="display-4 mb-4">Dependent Queries</h1>
         <div className="row">
@@ -56,11 +56,8 @@ const DependentQueriesPage = ({ email }) => {
                   <div className="col-md-12">
                     <div className="card-body">
                       <h4 className="card-title mb-0">{course}</h4>
-                      <p>{channel?.data.id}</p>
-                      <p className="card-text">
-                        <span className="fw-bold fs-6">User: </span>
-                        {user?.data.name}
-                      </p>
+                      <p className="main-color mb-4">{channel?.data.id}</p>
+                      <p className="card-text">{user?.data.name}</p>
                     </div>
                   </div>
                 </div>

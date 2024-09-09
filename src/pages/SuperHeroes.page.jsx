@@ -28,9 +28,9 @@ const SuperHeroesPage = () => {
   if (isLoading) return <Loading />;
   if (error) return <Error error={error} />;
   return (
-    <section className="my-4">
+    <section className="section">
       <div className="container">
-        <h1 className="display-4 mb-4">Super Heroes Page</h1>
+        <h1 className="display-4 mb-4">Super Heroes</h1>
         <div className="row">
           {data.map((hero, idx) => {
             return (

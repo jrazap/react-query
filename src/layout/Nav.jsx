@@ -15,10 +15,10 @@ const Nav = () => {
   const location = useLocation();
 
   return (
-    <nav className="nav my-2">
-      <div className="container flex-between">
-        <h2 className="fs-4">React Query</h2>
-        <ul className="items-center gap-3">
+    <nav className="nav">
+      <div className="container">
+        <h2 className="fs-4 mb-4">React Query</h2>
+        <ul className="d-flex flex-column gap-3">
           {navRoutes.map((route) => (
             <li
               key={route.path}
